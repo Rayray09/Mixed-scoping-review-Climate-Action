@@ -1,0 +1,282 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{newtxtext}
+\usepackage{newtxmath}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=3cm,right=3cm]{geometry}
+\usepackage[backend=bibtex,style=nature,sorting=none]{biblatex}
+\addbibresource{Reference.bib}
+\usepackage{amsmath}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{titlesec}
+
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{1em}{}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\doublespacing
+
+\date{}
+
+\begin{document}
+
+% ---------- Title and Author Block ----------
+
+\begin{center}
+
+{\large\bfseries
+Mechanisms of non-operational inclusion in disability-inclusive climate adaptation\par}
+
+\vspace{1.2em}
+
+{\normalsize Jingyu Lei\par}
+
+\vspace{0.5em}
+
+{\small [Affiliations]\par}
+{\small [Corresponding author: ]\par}
+
+\end{center}
+
+\vspace{1em}
+
+% ---------- Abstract ----------
+
+\noindent\textbf{Abstract}
+
+Disability is increasingly recognised in climate adaptation research and policy, yet recognition rarely becomes operational. Existing literature has documented disproportionate climate risks, established rights-based frameworks, and called for inclusion, but has not explained why inclusion fails to translate into actionable adaptation practice. Through a mixed scoping review combining bibliometric mapping, BERTopic topic modelling, and qualitative thematic synthesis of 267 records (42 core), this article identifies five recurring mechanisms through which disability inclusion remains non-operational: vulnerability framing, token inclusion, limited Disabled People's Organisation-led participation, able-bodied assumptions, and weak implementation. Bibliometric and topic modelling analyses reveal a field growing fastest in rights and justice discourse, with participation, behavioural evidence, and policy evaluation structurally absent. These five mechanisms are not only analytical findings; they constitute intervention targets. The article argues that progress in disability-inclusive climate adaptation requires research and practice designed to directly challenge the mechanisms preventing inclusion from becoming operational.
+
+\vspace{1em}
+
+\noindent\textbf{Keywords:} disability inclusion; climate adaptation; exclusion mechanisms; mixed scoping review; intervention design; Disabled People's Organisations; disability justice
+
+\clearpage
+
+% ---------- Introduction ----------
+
+\section*{Introduction}
+
+Disability is now formally recognised across the principal international instruments of climate adaptation governance. The Convention on the Rights of Persons with Disabilities (CRPD, 2006), the Sendai Framework for Disaster Risk Reduction (2015--2030), and the Paris Agreement (2015) each assert that persons with disabilities must be included in adaptation planning, implementation, and evaluation \cite{UN_CRPD_2006,UNISDR_Sendai_Framework_2015,UN_Paris_Agreement_2015}. A growing body of scholarship has built on this normative foundation: documenting the disproportionate climate risks faced by disabled people \cite{gaskin2017factors,kosanic2022inclusive}, theorising disability and climate change as a justice issue \cite{stein2022disability,King2022}, analysing the categorical and legal dimensions of inclusion within national and international policy frameworks \cite{jodoin2025systematic,Jodoin2020,Harpur2025}, examining domestic policy pathways \cite{brown2025massachusetts,engelman2025california}, theorising eco-ableism as a systemic framing problem \cite{Harpur2025}, and tracing the intersectional dimensions of disability and climate vulnerability \cite{Murcott2025,Parker2025}.
+
+Yet across this body of work a consistent structural pattern persists: recognition does not become operational. Of the 195 parties to the Paris Agreement, only 41 mention persons with disabilities in their active Nationally Determined Contributions, only 17 include concrete inclusion measures, and just six reference disability rights explicitly \cite{jodoin2025systematic}. Five years after the Sendai Framework's adoption, its global review found disability inclusion still weakly monitored and inconsistently implemented \cite{bennettgayle2020sendai}. Across jurisdictions as different as Nepal, Indonesia, Bangladesh, Zimbabwe, India, and the United States, policy document analyses report the same structural result: disability is acknowledged, but adaptation systems continue to be designed, resourced, and evaluated as if disabled people were not part of the population they serve \cite{devkota2023nepal,pertiwi2020indonesia,islam2015bangladesh,lunga2019zimbabwe,gershon2021fema}.
+
+The recognition--implementation gap is not a new observation. What is missing from the existing literature is an account of \textit{why} it persists across such varied governance contexts, and what that account implies for the design of future interventions. Existing scholarship has largely responded to the gap by calling for more inclusion, stronger monitoring, and better data---responses that are appropriate but do not engage the mechanisms that reproduce the gap in the first place. Without a mechanism-level explanation, inclusion efforts are likely to remain symbolic, reproduce the same structural absences, and leave the underlying dynamics intact.
+
+This article responds to that explanatory deficit. Drawing on a mixed scoping review of 267 records---comprising bibliometric mapping, BERTopic topic modelling, and qualitative thematic synthesis of a 42-record core dataset---it identifies five recurring mechanisms through which disability inclusion fails to become operational in climate adaptation: \textit{vulnerability framing}, \textit{token inclusion}, \textit{limited Disabled People's Organisation (DPO)-led participation}, \textit{able-bodied assumptions}, and \textit{weak implementation}. These mechanisms are not isolated policy failures; they are interlocking, reproduced across governance levels, and stabilised by institutional and social-behavioural dynamics that survive the formal adoption of inclusive language.
+
+The contribution of this article is twofold. Analytically, it provides a mechanism-level explanation of why disability inclusion stalls at the point of recognition. Practically, it repositions these mechanisms as intervention targets: each specifies where future research designs, participatory tools, scenario-based methods, and policy evaluation frameworks can be directed to challenge the processes that keep inclusion non-operational. The article does not repeat the case for including disabled people in climate adaptation---that case is well established. It argues that progress now requires moving from the question of \textit{whether} to include disabled people to the question of \textit{which mechanisms} prevent inclusion from becoming operational, and how those mechanisms can be directly challenged.
+
+% ---------- Results ----------
+
+\section*{Results}
+
+\subsection*{A fragmented evidence field}
+
+Bibliometric analysis of the 267-record extended dataset reveals a literature centred on climate change, disability, and disaster, with a knowledge structure characterised by thematic fragmentation and uneven conceptual development. Keyword co-occurrence mapping in VOSviewer, using a minimum occurrence threshold of 5, retained 51 keywords organised into six clusters, with 511 links and a total link strength of 1,513. Climate change, disability, and persons with disabilities emerge as dominant nodes, strongly connected to disaster risk reduction, vulnerability, preparedness, public health, and environmental justice. Terms related to participation, decision-making, policy evaluation, and disability inclusion occupy peripheral positions in the network, indicating that existing research has developed the risk and vulnerability dimensions of the field at the expense of its governance and agency dimensions.
+
+Temporal overlay analysis reinforces this pattern. Earlier literature (before approximately 2019) clusters around vulnerability, risk assessment, and demographic categories, while more recent documents are associated with climate justice, adaptation, and extreme weather, with climate justice reaching an average publication year of 2024.2. This temporal shift indicates that the field is moving beyond its origins in disaster-risk epidemiology toward rights- and justice-oriented framings. Governance, participation, and behavioural response have not yet developed as substantive thematic strands.
+
+Network topology analysis in Gephi provides quantitative depth to this picture. The keyword network comprises 60 nodes and 615 edges, with a graph density of 0.347. The average clustering coefficient of 0.586 signals substantial local cohesion within thematic neighbourhoods---disaster risk reduction, preparedness, resilience, and vulnerability cluster tightly---but modularity analysis identifies only two broad communities (score: 0.110): one clustering around disability, disaster risk, preparedness, and resilience; a second around climate change, environmental justice, public health, and adaptation. Climate change sits as a bridging node between them, and the low modularity score confirms that the two communities are interconnected rather than strongly separated. This partial separation between disability-disaster research and climate-health-governance research is structurally significant: it shows that disability-specific knowledge and climate adaptation governance remain weakly connected at the level of the literature's conceptual architecture, not only in policy practice. Disability, climate change, and disasters serve as the conceptual anchors of the field, with eigenvector centrality scores of 1.00, 0.98, and 0.89 respectively.
+
+Publication volume across the extended dataset confirms a field in accelerated growth: records addressing disability and climate governance are low before 2019, increase from 2020, and accelerate sharply in 2024--2025. This growth is concentrated in rights and justice framings. The field is expanding, but the expansion is amplifying recognition rather than operationalisation.
+
+\subsection*{Topic modelling identifies dominant and missing knowledge areas}
+
+BERTopic analysis of the 267-record extended dataset generated nine interpretable thematic clusters from 211 labelled records; 56 records (21\% of the extended dataset) were classified as outliers by the HDBSCAN algorithm and excluded from topic-level analysis. The nine topics and their representative keywords are presented in Table~\ref{tab:bertopic_topics}. Their distribution confirms the pattern identified in bibliometric analysis: the field concentrates around a small number of well-established concerns and leaves several analytically important areas structurally underdeveloped.
+
+\begin{table}[H]
+\centering
+\small
+\renewcommand{\arraystretch}{1.3}
+\caption{BERTopic-generated topics, interpreted labels, and representative keywords (n\,=\,211 labelled records across 9 clusters; 56 outliers excluded)}
+\label{tab:bertopic_topics}
+\begin{tabularx}{\textwidth}{
+>{\raggedright\arraybackslash}p{0.13\textwidth}
+>{\raggedright\arraybackslash}p{0.27\textwidth}
+>{\raggedright\arraybackslash}X
+}
+\toprule
+\textbf{Topic} & \textbf{Interpreted label} & \textbf{Representative keywords} \\
+\midrule
+Topic 1 & Disaster risk and risk reduction & disaster; risk; reduction; disability; inclusive; preparedness; drr \\
+Topic 2 & Rights, environmental justice and adaptation & rights; disability; environmental; adaptation; justice; inclusive; policy; social; vulnerability; policies \\
+Topic 3 & Heat and environmental health impacts & temperature; heat; health; air; multiple sclerosis; pollution; air pollution \\
+Topic 4 & Health, design and disability-related impacts & health; design; disability; impact; sustainable; environmental; systems; interventions; inclusive \\
+Topic 5 & Justice, equity and legal adaptation & justice; adaptation; indigenous; equity; legal; marginalised; litigation; vulnerable; law \\
+Topic 6 & Rehabilitation, medicine and care & rehabilitation; health; medicine; care; physical medicine; patients; professionals \\
+Topic 7 & Disease, health costs and government response & disease; health; rare; cost; health care; pandemics \\
+Topic 8 & Hurricanes, storms and living conditions & hurricane; stroke; storm; living; cyclones; preparedness; injury \\
+Topic 9 & Insurance, floods and extreme weather risk & insurance; flood; risk; extreme weather; disability; vulnerability \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The two largest and most temporally active topics---Topic 1 (disaster risk and risk reduction) and Topic 2 (rights, environmental justice and adaptation)---account for the majority of post-2020 publication growth. Their prominence confirms that the field's dominant knowledge areas are hazard-focused risk assessment and normative advocacy for rights-based inclusion. Topics 3, 6, 7, 8, and 9 represent specialised sub-literatures that remain low in volume and temporally flat.
+
+Critically, no topic emerges around participatory governance, disability-specific behavioural evidence, DPO-led research design, intervention evaluation, or computational policy tools. These absences are structural: they reflect knowledge areas the field has not yet constituted as legitimate research objects. Term importance analysis supports this reading: terms that anchor the field's most active clusters---\textit{disaster}, \textit{rehabilitation}, \textit{hurricane}, \textit{insurance}---are sharply concentrated within single topics, indicating stable and well-bounded sub-literatures; terms associated with adaptation governance (\textit{rights}, \textit{justice}, \textit{equity}, \textit{inclusive}, \textit{adaptation}) spread across multiple topics with overlapping weights, indicating that rights-based framing is diffuse rather than grounded in a coherent governance research tradition.
+
+The temporal topic prevalence analysis reinforces the bibliometric finding: the field is moving from disaster-risk framing toward adaptation- and justice-oriented framing, but behavioural and policy-evaluation themes remain absent from the most active clusters. The literature has expanded its normative vocabulary without developing the empirical and methodological infrastructure needed to translate that vocabulary into operational adaptation practice.
+
+\subsection*{Mechanisms of non-operational inclusion}
+
+Qualitative thematic synthesis of the 42-record core dataset identifies five recurring mechanisms through which disability inclusion fails to become operational. Each recurs across multiple governance levels, geographic settings, and policy domains, suggesting that they reflect structural features of how climate adaptation systems are organised rather than failures of individual policies or practitioners. They are summarised in Table~\ref{tab:mechanisms} and developed in detail below.
+
+\begin{table}[H]
+\centering
+\small
+\renewcommand{\arraystretch}{1.3}
+\caption{Five mechanisms of non-operational inclusion, theoretical accounts, and key evidence}
+\label{tab:mechanisms}
+\begin{tabularx}{\textwidth}{
+>{\raggedright\arraybackslash}p{0.20\textwidth}
+>{\raggedright\arraybackslash}p{0.21\textwidth}
+>{\raggedright\arraybackslash}X
+}
+\toprule
+\textbf{Mechanism} & \textbf{Primary theoretical account} & \textbf{How the mechanism operates} \\
+\midrule
+Vulnerability framing
+& Social dominance theory; critical disability studies
+& Disability is positioned primarily as a risk multiplier, constructing disabled people as recipients of protection rather than as knowledge-holders or decision-makers, and naturalising their exclusion from policy processes \cite{sidanius_pratto_1999_socdom,oliver_1990_politics,sheknoble2023communicating,Harpur2025}. \\
+\midrule
+Token inclusion
+& System justification theory
+& Consultation or formal recognition is treated as equivalent to substantive inclusion; disadvantaged group members accept token arrangements as legitimate, dampening demand for operational reform and enabling symbolic participation to substitute for accountability \cite{jost_2003_decade,Akike2025,setijaningrum2024tokenism,bennettgayle2020sendai}. \\
+\midrule
+Limited DPO-led participation
+& Capability approach
+& Meaningful participation occurs only where DPOs lead the design and interpretation of processes; mainstream programmes lack the partnership architecture---trusted intermediaries, accessible channels, co-design structures---that converts formal entitlements into actual functioning \cite{sen_1999_development,pertiwi2019dpo,villeneuve2017dpo,ton2021agency,rahatiningtyas2025yogyakarta}. \\
+\midrule
+Able-bodied assumptions
+& Institutional theory; critical disability studies
+& Adaptation systems embed assumptions of normal mobility, communication access, service access, housing conditions, transport, and emergency response capacity, reproduced through institutional routines rather than explicit decisions, making exclusion invisible to planners and auditors \cite{dimaggio_powell_1983_ironcage,oliver_1990_politics,lunga2019zimbabwe,gershon2021fema,brown2025massachusetts}. \\
+\midrule
+Weak implementation
+& Institutional theory
+& Even where disability is recognised in policy text, institutional fragmentation, inaccessible communication formats, resource constraints, and the absence of enforceable accountability mechanisms prevent recognition from becoming operational \cite{dimaggio_powell_1983_ironcage,devkota2023nepal,pertiwi2020indonesia,islam2015bangladesh,Brunne2025}. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\textbf{Vulnerability framing.} The most pervasive mechanism in the core dataset is the persistent positioning of disabled people primarily as vulnerable recipients of protection. Across case studies in Nepal \cite{devkota2023nepal}, Indonesia \cite{pertiwi2020indonesia}, the Philippines \cite{tagalo2020davao}, Australia \cite{quaill2019queensland}, and international policy review \cite{sheknoble2023communicating}, disability enters adaptation discourse as a risk category rather than as a source of knowledge or a political constituency. This framing does more than describe: it organises institutional roles, policy instruments, and research questions around the premise that disabled people need to be protected, which simultaneously positions their exclusion from decision-making as protective rather than discriminatory. Social dominance theory accounts for the unusual stability of this framing, showing how vulnerability language functions as a legitimising narrative that allows governance systems to maintain group-based hierarchies while appearing benevolent \cite{sidanius_pratto_1999_socdom,Murcott2025}. Critical disability studies reframes vulnerability itself as an institutional product: disabled people are rendered vulnerable not by their impairments but by the interaction of impairment with inaccessible environments, weak emergency communication, and exclusion from decision-making \cite{oliver_1990_politics,stjernholm2025critical}. A growing intersectional and decolonial strand of the literature is actively contesting this framing \cite{stjernholm2025critical,eriksen2025rock,pirmasari2023halinai}, but contestation remains a minority position in the field's thematic structure, as the topic modelling analysis confirms.
+
+\textbf{Token inclusion.} Formal recognition of disability in policy text, consultation records, or planning documents is routinely presented and accepted as equivalent to substantive inclusion, without changing policy design, implementation, or accountability. The pattern appears in the five-year Sendai Framework review \cite{bennettgayle2020sendai}, in municipal disability plans in Massachusetts \cite{brown2025massachusetts} and California \cite{engelman2025california}, and in analyses of local governance in Indonesia \cite{setijaningrum2024tokenism} and the Philippines \cite{tagalo2020davao}. System justification theory illuminates the psychological dimension of this mechanism: disadvantaged groups develop a tendency to treat unequal arrangements as natural and legitimate, which dampens internal demand for reform and enables token participation to substitute for operational change \cite{jost_2003_decade,Akike2025}. The implication is that token inclusion is not simply a failure of political will among policymakers; it is also stabilised by the adaptation of disabled people and their organisations to arrangements they did not design and cannot easily exit.
+
+\textbf{Limited DPO-led participation.} Meaningful participation is overwhelmingly dependent on DPOs leading the design and interpretation of research and policy processes, rather than being achieved through mainstream inclusion programmes. The Indonesian DPO case studies \cite{pertiwi2019dpo,pertiwi2022bridging,villeneuve2017dpo}, the Vietnam capability approach work \cite{ton2021agency,ton2020capabilities}, Deaf twin-track disability inclusion approaches \cite{craig2023twintrack,cooper2021vietnam,calgaro2021silent}, and the Yogyakarta partnership analysis \cite{rahatiningtyas2025yogyakarta} converge on a consistent finding: where participation is meaningful, it depends on DPO-controlled communication channels, trusted intermediary relationships, and co-design structures that state actors have not replicated in mainstream adaptation governance. The capability approach provides the conceptual account: DPOs supply the conversion factors---trusted channels, accessible formats, representative relationships---that translate formal entitlements to participation into actual functioning \cite{sen_1999_development,ton2021agency,villeneuve2021pcep}. When DPOs are absent or merely consulted, the conversion factors are absent, and formal participation rights remain inert.
+
+\textbf{Able-bodied assumptions.} Climate adaptation systems reproduce exclusion structurally by embedding assumptions about what constitutes normal physical and communicative capacity. Emergency evacuation routes assume unimpaired mobility; early warning systems assume standard literacy and hearing; cooling centre access assumes personal transport; public shelter design assumes standard physical dimensions; digital climate information services assume unimpaired vision and fine motor control \cite{lunga2019zimbabwe,gershon2021fema,ivey2014deafhh,brown2025massachusetts,engelman2025california}. These assumptions are not the product of explicit decisions to exclude disabled people; they are reproduced through institutional routines and professional norms that take able-bodied users as the default, making exclusion invisible rather than intentional. Institutional theory accounts for this: organisations reproduce embedded assumptions through habit, mimicry, and normative pressure rather than deliberate choice \cite{dimaggio_powell_1983_ironcage}. The result is that adaptation systems can incorporate disability language in their planning documents while their operational infrastructure remains designed for a different population.
+
+\textbf{Weak implementation.} The four preceding mechanisms converge on, and are stabilised by, a fifth: even where disability is recognised in formal policy, institutional conditions prevent that recognition from becoming operational. Implementation fails for at least three structural reasons across the corpus. First, institutional fragmentation means that disability-relevant knowledge is held within disability ministries or disability organisations, while climate adaptation governance sits in environment ministries, emergency services, or urban planning departments; the two rarely communicate systematically \cite{devkota2023nepal,islam2015bangladesh,pertiwi2020indonesia}. Second, communication formats for both adaptation information and participation processes are routinely inaccessible, whether through complex language, absence of sign language interpretation, or lack of alternative formats \cite{lunga2019zimbabwe,gershon2021fema}. Third, and most structurally, there are no enforceable accountability or monitoring mechanisms requiring disability-inclusive implementation to be reported, evaluated, or corrected: recognition is established in principle without the institutional architecture that would make non-implementation costly \cite{Brunne2025,Jodoin2020}. Weak implementation is therefore not simply a resource problem that more funding would resolve; it reflects an institutional design in which disability inclusion is an aspiration without operational accountability.
+
+\subsection*{From mechanisms to intervention targets}
+
+The value of a mechanism-level analysis lies not only in explanation but in redirection. If disability inclusion fails for reasons that are identifiable and recurring, then each mechanism specifies where intervention can most productively be directed. Table~\ref{tab:intervention-targets} maps each mechanism to a set of intervention types that target it directly.
+
+\begin{table}[H]
+\centering
+\small
+\renewcommand{\arraystretch}{1.3}
+\caption{Mechanisms of non-operational inclusion and corresponding intervention targets for future research and practice}
+\label{tab:intervention-targets}
+\begin{tabularx}{\textwidth}{
+>{\raggedright\arraybackslash}p{0.21\textwidth}
+>{\raggedright\arraybackslash}X
+}
+\toprule
+\textbf{Mechanism} & \textbf{Intervention targets} \\
+\midrule
+Vulnerability framing
+& Participatory scenario methods and serious games that position disabled participants as decision-makers rather than risk subjects; qualitative and narrative research designs generating evidence of disabled people's adaptive strategies and governance contributions; reframing checklists for policy document review that identify and challenge vulnerability-dominant language; DPO-led counter-framing processes embedded in adaptation planning. \\
+\midrule
+Token inclusion
+& Policy evaluation tools that assess whether inclusion changes policy design, resource allocation, or accountability---not merely whether disabled people appear in consultation records; simulation-based methods that test whether adaptation outcomes differ under token versus substantive participation architectures; indicators that distinguish process inclusion from outcome-level change. \\
+\midrule
+Limited DPO-led participation
+& Research designs and policy processes that position DPOs as co-designers and interpreters, not as advisory bodies; funding and methodological infrastructure that supports DPO-led research on adaptation governance; capacity-building approaches that develop the partnership architecture for DPO involvement in mainstream adaptation planning; twin-track approaches that develop both disability-specific and mainstreamed participation routes simultaneously. \\
+\midrule
+Able-bodied assumptions
+& Accessibility audits of adaptation infrastructure and planning procedures, conducted with disabled participants rather than only by planning professionals; agent-based modelling and computational policy simulation tools that make able-bodied assumptions explicit and testable under impairment-relevant heterogeneity; universal design standards with enforceable application to adaptation systems; scenario-based testing of emergency response procedures with diverse disability groups. \\
+\midrule
+Weak implementation
+& Accountability frameworks requiring disability-inclusive adaptation to be monitored and reported at the level of operational outcomes; institutional arrangements creating direct communication channels between disability organisations and adaptation governance bodies; scenario-based policy evaluation methods that simulate implementation gaps and their distributional consequences; enforceable monitoring provisions embedded in NDC review cycles. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Several cross-cutting intervention design principles follow from this mapping. First, disability-inclusive adaptation research should be oriented toward generating \textit{behavioural evidence at the decision level}---evidence of how disabled people navigate real climate scenarios, evaluate governance arrangements, and respond to policy options---rather than epidemiological documentation of risk exposure, which the field already has in abundance. Second, participatory methods including serious games and scenario-based approaches are particularly suited to generating this evidence because the mechanisms identified here (framing as a choice, token versus substantive participation, conversion factors for functioning) manifest as situated decisions rather than as latent attitudes. Third, computational policy simulation approaches can make able-bodied assumptions visible and testable rather than invisible and default, if they are calibrated using disability-specific behavioural evidence. Fourth, accountability-oriented evaluation frameworks are needed to create the institutional conditions under which weak implementation becomes costly rather than costless. Together, these principles define a research agenda oriented not toward more documentation of the recognition--implementation gap, but toward methods that act directly on the mechanisms that produce it.
+
+% ---------- Discussion ----------
+
+\section*{Discussion}
+
+The five mechanisms identified in this review offer a systematic account of why disability inclusion remains non-operational across governance contexts that have formally committed to it. The consistency of the mechanisms across jurisdictions as diverse as Indonesia, Nepal, Bangladesh, Zimbabwe, Australia, and the United States suggests that they are not artefacts of particular political cultures or resource constraints, but structural features of how climate adaptation systems interface with disability. This finding has substantive implications for adaptation governance, disability justice, intervention design, and policy evaluation.
+
+For adaptation governance, the mechanisms reframe the inclusion problem in ways that redirect policy attention. Vulnerability framing is not merely a conceptual shortcoming; it is an active governance mechanism that positions disabled people outside the decision-making structures that shape their adaptation options. Token inclusion is not simply a matter of insufficient sincerity; it is stabilised by institutional dynamics---social justification, absence of accountability, structural inertia---that survive changes in normative commitments. Able-bodied assumptions are not accidental design oversights; they are reproduced through organisational routines that will not be corrected by adding disability language to planning documents. Weak implementation is not resolved by stronger commitment language; it requires the institutional architecture---cross-sectoral coordination, accessible communication, enforceable monitoring---that connects recognition to operational outcomes. Each of these reframings implies a different policy response than the recognition-and-advocacy approach that currently dominates the field.
+
+For disability justice, the analysis suggests that the gap between rights and reality is not primarily a gap in legal or normative frameworks, which are now reasonably well developed, but a gap in the institutional and social-behavioural conditions that would make those frameworks effective. The CRPD, the Sendai Framework, and disability provisions in NDCs are necessary but not sufficient: they establish the normative standard without creating the accountability architecture, partnership infrastructure, or institutional redesign that would make non-compliance costly and inclusion operational. Advancing disability justice in climate adaptation therefore requires engagement with the mechanisms that reproduce the gap, not only with the frameworks that define the aspiration \cite{stein2022disability,Polack2008}.
+
+The relationship between the five mechanisms is not simply additive. Vulnerability framing provides the ideological legitimation for token inclusion: if disabled people are primarily defined by their need for protection, then protecting them---even symbolically---appears sufficient. Token inclusion is stabilised by the absence of DPO-led participation, because DPOs are the actors most likely to contest it; and the absence of DPO-led participation is itself partly explained by able-bodied assumptions in governance design that make DPO engagement structurally difficult. Weak implementation then closes the cycle by ensuring that even moments of genuine recognition do not accumulate into systemic change. The mechanisms therefore constitute an interlocking system in which each reinforces the others, and in which piecemeal interventions targeting only one mechanism at a time are likely to be absorbed without disrupting the overall pattern. Effective intervention requires addressing multiple mechanisms simultaneously and attending to their interactions.
+
+For intervention design, the most significant implication is methodological. The absence of participatory governance, behavioural evidence, and policy evaluation as knowledge areas in the topic modelling analysis is not a gap that more descriptive or advocacy-oriented research can fill. It signals a need for methods that generate evidence at a different level: how disabled people make adaptive decisions under realistic policy conditions, which governance arrangements convert formal entitlements into actual functioning, and how adaptation systems perform under impairment-relevant heterogeneity. Serious games and scenario-based participatory methods are particularly well-suited to this because they can generate decision-level evidence from disabled participants directly, rather than inferring adaptive behaviour from aggregate risk data or policy text analysis \cite{TannenbaumBaruchi2024,gerber2021games}. Computational policy simulation, including agent-based modelling calibrated with disability-specific behavioural data, can make able-bodied planning assumptions explicit and testable in ways that conventional policy analysis cannot \cite{macal2005tutorial}.
+
+For policy evaluation, the mechanisms provide a framework for assessing disability-inclusive adaptation in terms of operational outcomes rather than process indicators. Evaluating whether a policy includes disability language or conducts disability consultations does not assess whether the five mechanisms have been addressed; evaluating whether participation architecture has shifted from consultative to co-design, whether able-bodied assumptions have been identified and removed, and whether implementation accountability has been established does. This distinction matters because the existing pattern---formal recognition accompanied by operational non-implementation---can only be reproduced if policy evaluation continues to assess inclusion at the level of recognition rather than at the level of operational impact.
+
+Three limitations qualify these findings. First, the three databases searched under-index grey literature, DPO-led reports, and non-English scholarship. This under-indexing is systematically biased in a direction that is likely to amplify rather than contradict the mechanisms identified: DPO-produced literature tends to challenge vulnerability framing and document governance failures more directly than peer-reviewed academic literature, so the mechanisms are probably understated in the present corpus. Second, the qualitative synthesis rested on a single coder, mitigated through deductive-led coding from an explicit framework and inter-session stability checking; future work should incorporate multiple coders and member-checking with DPO partners. Third, the corpus is dominated by disaster risk reduction research under the Sendai Framework, with climate adaptation governance as a distinct domain remaining a small and recent sub-literature \cite{brown2025massachusetts,engelman2025california,pirmasari2023halinai}; the mechanisms are identified primarily from DRR evidence and may manifest with different intensities or emphases in climate adaptation planning contexts. These limitations do not undermine the core findings---the mechanisms are evidenced across too many diverse settings to be artefacts of database or domain selection---but they indicate that case studies grounded explicitly in climate adaptation governance, incorporating DPO-produced evidence, and using participatory validation methods would substantially strengthen the evidence base.
+
+The central argument is not that disability-inclusive climate adaptation is impossible. The corpus documents cases of meaningful inclusion, effective DPO partnerships, and adaptation systems that have genuinely changed their governance architecture \cite{pertiwi2019dpo,villeneuve2021pcep,ton2021agency,rahatiningtyas2025yogyakarta,webb2020vanuatu}. What those cases share is that they did not simply add disability language to existing systems; they redesigned the participation structure, the communication architecture, and the accountability mechanisms in ways that directly challenged one or more of the five mechanisms identified here. The implication for future research and practice is clear: disability inclusion in climate adaptation will not become operational through more advocacy or stronger normative commitments alone. It will become operational when the mechanisms that prevent it are understood precisely enough to be directly and systematically challenged.
+
+% ---------- Methods ----------
+
+\section*{Methods}
+
+\subsection*{Review design}
+
+The review adopts a mixed scoping review design combining bibliometric analysis, computational topic modelling, and qualitative thematic synthesis. A scoping review is appropriate for a field that is fragmented and conceptually unsettled, and where the objective is to map positioning and identify structural knowledge gaps rather than to estimate the effect of a defined intervention \cite{arksey2005scoping,levac2010scoping,munn2018systematic}. Although this article reports original empirical work based on a systematic literature synthesis rather than a conventional experimental or observational study, it is submitted as an Article in accordance with npj Climate Action's guidance that systematic reviews, scoping reviews, and meta-analyses should be submitted in the Article format. The three analytical methods are applied sequentially across two datasets: the 267-record extended dataset supports bibliometric analysis and topic modelling; the 42-record core dataset supports qualitative thematic synthesis. The primary output is a mechanism-level account of how disability inclusion fails to become operational, rather than a thematic catalogue of the field's content.
+
+\subsection*{Search strategy and eligibility criteria}
+
+Literature searches were conducted in Web of Science, Scopus, and PubMed to identify literature at the intersection of disability and climate governance. These databases were selected for their complementary coverage: Web of Science and Scopus provide broad multidisciplinary indexing of social science, policy, and environmental research; PubMed adds depth in health and disability literatures. The search combined climate-related terms (``climate change'', ``climate adaptation'', ``adaptation to climate change'', ``climate resilience'', ``disaster risk reduction'', ``climate risk'', ``climate governance'', ``climate policy'', ``climate justice'') with disability-related terms informed by the WHO International Classification of Functioning, Disability and Health (ICF) \cite{who_2001_icf}, which conceptualises disability as the outcome of interactions between health conditions and contextual factors. Vulnerability-related terms were tested but excluded from the final search strategy because their inclusion expanded results to 70,687 records, predominantly capturing general climate vulnerability studies in which disability was only marginally referenced. The search was restricted to records published between 2006---the year of the CRPD---and 2025.
+
+Records were imported into Rayyan for screening in accordance with the PRISMA extension for Scoping Reviews (PRISMA-ScR) \cite{tricco2018prisma}. Following title and abstract screening and full-text review, 267 records were retained as the extended dataset. A further eligibility stage selected the 42-record core dataset; inclusion required substantive empirical or analytical engagement with at least one of four recognition-to-implementation stages: disability framing and its contestation; participation and representation processes; disabled people's adaptive behavioural responses; and institutional implementation of disability-inclusive adaptation measures.
+
+\subsection*{Bibliometric mapping}
+
+Bibliometric analysis was conducted on the extended dataset using VOSviewer and Gephi. VOSviewer was used to construct keyword co-occurrence maps and temporal overlay visualisations \cite{van_eck_waltman_2010_vosviewer,van_eck_waltman_2014_visualizing}. A thesaurus file was applied to merge spelling variants and remove non-substantive index terms; a minimum occurrence threshold of 5 retained 51 keywords for analysis. Gephi was used to compute network topology metrics---graph density, average weighted degree, clustering coefficient, and eigenvector centrality---and to conduct modularity-based community detection \cite{newman_2006_modularity}. The two tools together allow the conceptual structure of the literature to be read both as a topical map (VOSviewer) and as a quantified network of interconnections (Gephi).
+
+\subsection*{Topic modelling}
+
+BERTopic was applied to the combined titles, abstracts, and author keywords of the 267-record extended dataset. BERTopic combines transformer-based sentence embeddings with HDBSCAN density-based clustering and class-based TF-IDF keyword extraction \cite{grootendorst_2022_bertopic}, producing semantically coherent clusters suited to a fragmented, interdisciplinary corpus where the same research concern surfaces under different terminologies. The model was implemented in Python. Documents that HDBSCAN could not assign to any cluster were classified as outliers (topic $-1$); 56 records were so classified, leaving 211 records across 9 substantive topics. Topic labels were assigned through manual interpretation of representative keywords, topic-word scores, topic size, and document content; generic or cross-topic terms were added to the stop-word list and the model re-fitted iteratively until each cluster's keyword profile was substantively distinctive.
+
+\subsection*{Qualitative thematic synthesis}
+
+Thematic synthesis of the 42-record core dataset followed a hybrid deductive-led approach combining an a priori analytical framework with inductively generated codes \cite{fereday2006demonstrating,azungah2018qualitative}. The framework was developed deductively from the review question and four recognition-to-implementation sub-questions corresponding to the four stages of the core dataset inclusion criteria. The template was piloted on a small subset and then applied to all 42 core records read in full, with inductive codes added where material fell outside the predefined categories. Stability was checked by re-coding a subset after a temporal interval. Coded passages were collated within categories, connected across records to surface recurring patterns, and refined inductively into the five mechanisms; the number of mechanisms was not fixed in advance.
+
+\subsection*{Mechanism identification}
+
+The five mechanisms were identified through a synthesis of qualitative thematic coding and theoretical interpretation. Each mechanism was required to meet three criteria: it must be evidenced by recurring coded patterns across multiple records in the core dataset; it must be interpretable through at least one established social-science theoretical framework; and it must appear structurally across different governance levels, geographic contexts, or policy domains. The theoretical frameworks applied were the capability approach \cite{sen_1999_development,nussbaum_2011_capabilities}, critical disability studies and the social model \cite{oliver_1990_politics}, system justification theory \cite{jost_2003_decade}, social dominance theory \cite{sidanius_pratto_1999_socdom}, and institutional theory \cite{dimaggio_powell_1983_ironcage}. These were used as analytical lenses to account for the persistence of each pattern rather than to test hypotheses formally. Convergence across all three analytical methods---bibliometric, topic modelling, and qualitative synthesis---was used to assess the robustness of each mechanism.
+
+\subsection*{Reflexivity and methodological limitations}
+
+The review was conducted by a single researcher, introducing potential for selection and interpretation bias. This was mitigated through an explicit deductive framework, stop-word iteration in topic modelling, and inter-session stability checking in qualitative coding. The three databases searched under-index grey literature, DPO-produced reports, and non-English scholarship; as argued above, the likely direction of this bias is toward understating rather than overstating the mechanisms. The 2025 publication data should be treated as a lower bound due to database coverage lag. The review is scoped as a mapping study: its findings are presented as explanatory and mechanism-identifying rather than as effect-size estimates or definitive causal claims. Findings from systematic cross-referencing of mechanisms against source records were used throughout to ensure that the five mechanisms were grounded in the data rather than imposed by the analytical framework.
+
+% ---------- Data availability ----------
+
+\section*{Data availability}
+
+The 267-record extended dataset and the 42-record core dataset supporting this review are available from the corresponding author upon reasonable request. BERTopic model outputs and keyword co-occurrence data are available at [repository link to be added upon acceptance].
+
+% ---------- Bibliography ----------
+
+\printbibliography
+
+\end{document}
